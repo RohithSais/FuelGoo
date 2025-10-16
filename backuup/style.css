@@ -1,0 +1,110 @@
+/* style.css */
+
+:root {
+    --primary-blue: #007AFF;
+    --background-light: #F4F7F5;
+    --card-background: #FFFFFF;
+    --text-dark: #2c3e50;
+    --text-light: #888;
+    --border-color: #e0e0e0;
+    --success-green: #28a745;
+    --success-green-hover: #218838;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.header {
+    background-color: var(--card-background);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-title span {
+    color: var(--primary-blue);
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.order-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid var(--border-color);
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-body p {
+    margin: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.card-body span {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.accept-btn {
+    background-color: var(--success-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.accept-btn:hover {
+    background-color: var(--success-green-hover);
+}
+
+.no-requests {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
